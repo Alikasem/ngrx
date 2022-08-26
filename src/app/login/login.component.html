@@ -1,0 +1,19 @@
+<div class="login-container">
+  <form class="form-group" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
+      <label class="label-form" for="firstname">username</label>
+      <input type="email" name="firstname" formControlName="username">
+
+      <label for="lastname">password</label>
+      <input type="password" name="lastname" formControlName="password">
+      <p *ngIf="success$ | async" >{{msg.message}}</p>
+    <div class="button-container">
+      <button
+        type="submit"
+        class="dubmit-form"
+        [disabled]="!loginForm.valid"
+      >
+        Login
+      </button>
+    </div>
+  </form>
+</div>
