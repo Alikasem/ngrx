@@ -5,7 +5,7 @@
 
       <label for="lastname">password</label>
       <input type="password" name="lastname" formControlName="password">
-      <p *ngIf="success$ | async" >{{msg.message}}</p>
+      <p *ngIf="success$" >{{msg.message}}</p>
     <div class="button-container">
       <button
         type="submit"
