@@ -5,10 +5,10 @@ import  practicesData  from '../practicesData.json'
   providedIn: 'root'
 })
 export class PracticesService {
-  practices = [practicesData];
+  practices = practicesData;
   constructor() {
   }
   getPractices(){
-    return this.practices.slice();
+    return JSON.parse(JSON.stringify(this.practices)) ;
   }
 }

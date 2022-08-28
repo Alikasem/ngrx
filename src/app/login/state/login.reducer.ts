@@ -1,6 +1,6 @@
 import { createReducer, on } from "@ngrx/store";
 import * as loginActions from './login.actions';
-import { login } from "src/app/login.model";
+import { login } from "src/app/models/login.model";
 
 export interface state {
   success: boolean,

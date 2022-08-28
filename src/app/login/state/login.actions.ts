@@ -1,5 +1,5 @@
 import { createAction, props } from "@ngrx/store";
-import { login } from "src/app/login.model";
+import { login } from "src/app/models/login.model";
 
 
 export const LOGIN_SUCCESS = '[Login Component success]';
