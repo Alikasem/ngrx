@@ -12,12 +12,18 @@ import { carsListAction } from '../cars-state/cars.actions';
 export class CarsListComponent implements OnInit {
   practices$: Observable<practice[]>
   constructor(private store: Store<{practice: practice[]}>) {
-      this.practices$ = this.store.select(state => state.practice)
+    this.practices$ = this.store.select(state => {
+      console.log("state",state)
+      return state.practice
+    })
     }
 
     ngOnInit(): void {
       this.store.dispatch(carsListAction());
-      console.log(this.practices$)
+      this.practices$.subscribe(res => {
+        console.log("inlis",res)
+      })
+      // console.log(this.practices$)
 
   }
 

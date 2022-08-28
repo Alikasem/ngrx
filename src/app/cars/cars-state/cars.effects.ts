@@ -15,7 +15,8 @@ export class practicesEffects {
         ofType(practicesActions.carsListAction),
         switchMap(() => {
           return this.practiceService.getPractices().pipe(
-            map((practices: practice[]) =>{
+            map((practices: any) => {
+              console.log("omar is here",practices)
             return practicesActions.loadPracticesSuccess({practices})
           }))
         }
